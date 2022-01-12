@@ -1,13 +1,12 @@
 <template>
   <div id="tab-bar">
-    <!-- 为了避免打乱大的TabBar内的逻辑，这里直接使用slot   -->
     <slot></slot>
   </div>
 </template>
 
 <script>
 export default {
-  name: "TabBar"
+  name: 'TabBar'
 }
 </script>
 
@@ -23,8 +22,7 @@ export default {
   bottom: 0;
 
   /* 搞一个小阴影 */
-  box-shadow: 0 -1px 1px rgba(100, 100, 100, .2);
+  box-shadow: 0 -2px 2px rgba(100, 100, 100, .2);
 }
-
 
 </style>
