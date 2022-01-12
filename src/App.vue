@@ -1,31 +1,25 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <router-view></router-view>
+    <!-- ----暂未实现:这里可以考虑使用v-if和v-else来进行老人和志愿者底部导航栏的切换  -->
+    <!-- <elder_tabbar/>-->
+    <volunteer_tabbar/>
   </div>
 </template>
 
+<script>
+import elder_tabbar from "@/components/content/MainTabbar/elder_tabbar";
+import volunteer_tabbar from "@/components/content/MainTabbar/volunteer_tabbar";
+
+export default {
+  name: 'app',
+  components: {
+    elder_tabbar,
+    volunteer_tabbar
+  }
+}
+</script>
+
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-}
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>

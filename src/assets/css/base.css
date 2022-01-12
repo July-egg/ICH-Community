@@ -1,0 +1,58 @@
+/* 一些基础的样式 */
+
+@import "normalize.css";
+
+/* root获取根元素html，同时定义css变量*/
+:root{
+    --color-text: #666;
+    --color-high-text: #ff5777;
+    --color-tint: #ff8198;
+    --color-backgroud: #fff;
+    --font-size: 14px;
+    --line-height: 1.5;
+}
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    user-select: none; /* 禁止用户在页面上选中图片、文字等 */
+    background: var(--color-backgroud);
+    color: var(--color-text);
+    width: 100vw;
+}
+
+a{
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.clear-fix::after{
+    clear: both;
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.clear-fix{
+    zoom: 1;
+}
+
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
+
+
+
+
