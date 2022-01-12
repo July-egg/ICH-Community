@@ -1,3 +1,4 @@
+<!--这里是一个tabbar条-->
 <template>
   <div id="tab-bar">
     <slot></slot>

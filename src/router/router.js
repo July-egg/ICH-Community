@@ -15,53 +15,51 @@ const volunteer_publish = () => import("../views/volunteer/publish")
 const volunteer_messages = () => import("../views/volunteer/messages")
 const volunteer_profile = () => import("../views/volunteer/profile")
 
+// 引入各个页面对应的组件
+const homepage = () => import("../views/homepage/homepage")
+const community = () => import("../views/community/community")
+const games = () => import("../views/games/games")
+const shopping = () => import("../views/shopping/shopping")
+const profile = () => import("../views/profile/profile")
+
 
 const routes = [
   {
+    // 默认跳转页面为首页
     path: '',
-    // ----暂未完成：redirect这里需要根据登录者的身份动态确定
-    // redirect:'/elder/community'
-    redirect:'/volunteer/home'
-  },
-  // 老人页面的路径配置
-  {
-    path:'/elder/community',
-    component:elder_community
-  },
-  {
-    path:'/elder/voice',
-    component:elder_voice
-  },
-  {
-    path:'/elder/profile',
-    component:elder_profile
+    redirect:'/homepage'
   },
   
-  // 志愿者界面的路径配置
+  //具体各个页面路径配置
+  
+  // 首页
   {
-    path: '/volunteer/home',
-    name: '/volunteer/home',
-    component:volunteer_home
+    path:'/homepage',
+    component:homepage
   },
+  
+  // 社区
   {
-    path: '/volunteer/organization',
-    name: '/volunteer/organization',
-    component:volunteer_org
+    path:'/community',
+    component:community
   },
+  
+  // 游戏
   {
-    path: '/volunteer/publish',
-    name: '/volunteer/publish',
-    component:volunteer_publish
+    path: '/games',
+    component:games
   },
+  
+  // 商城
   {
-    path: '/volunteer/messages',
-    name: '/volunteer/messages',
-    component:volunteer_messages
+    path: '/shopping',
+    component:shopping
   },
+  
+  // 我的
   {
-    path: '/volunteer/profile',
-    name: '/volunteer/profile',
-    component:volunteer_profile
+    path: '/profile',
+    component:profile
   },
   
 ]

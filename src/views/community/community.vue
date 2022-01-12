@@ -1,10 +1,10 @@
 <template>
-  <h2>这是老人的语音页</h2>
+$END$
 </template>
 
 <script>
 export default {
-  name: "voice"
+name: "community"
 }
 </script>
 

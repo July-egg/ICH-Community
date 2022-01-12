@@ -1,11 +1,14 @@
+<!--这里是每个tabbar的每个坑位中具体填什么-->
 <template>
   <div class="tab-bar-item" @click="itemClick">
+    <!-- v-if-else用来调整图片被点击与否时的状态(有无高光阴影之类的)   -->
     <div v-if="!isActive">
-      <slot  name="item-icon"></slot>
+      <slot name="item-icon"></slot>
     </div>
     <div v-else>
       <slot name="item-icon-active"></slot>
     </div>
+    
     <!--  此处采用绑定类方式已经不可取，改为动态绑定style  -->
     <div :style="activeStyle">
       <slot name="item-text"></slot>

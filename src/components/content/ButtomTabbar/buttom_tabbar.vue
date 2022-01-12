@@ -1,10 +1,10 @@
 <template>
-  <h2>这是老人的社区页</h2>
+$END$
 </template>
 
 <script>
 export default {
-  name: "community"
+name: "buttom_tabbar"
 }
 </script>
 
